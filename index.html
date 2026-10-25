@@ -1,496 +1,182 @@
 <!doctype html>
 <html lang="en-ZA">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#FDF8F3">
-  <meta name="description" content="Nibble, Sip, Repeat. South Africa — a fresh way to discover South African food, wine and travel experiences. Join the insider list for early releases and secret discoveries. Coming soon.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Nibble, Sip, Repeat — Something delicious is coming">
-  <meta property="og:description" content="Savouring the soul of South Africa, one sip and nibble at a time. Get first access to experiences, limited releases, and secret discoveries worth sharing.">
-  <meta property="og:image" content="assets/nibble-sip-repeat-poster.png">
-  <meta name="color-scheme" content="light">
-  <title>Nibble, Sip, Repeat | South Africa | Coming Soon</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      /* Palette and type system adapted from the supplied Claude site */
-      --green:#007749;--green-deep:#0F2A20;--gold:#FFB81C;--blue:#001489;--red:#E03C31;
-      --cream:#FDF8F3;--warm:#F6EEE2;--white:#fff;--ink:#1C1B18;--muted:#5E5A50;
-      --line:#E6DBCB;--on-dark:#F7F1E6;
-      --display:'Playfair Display',Georgia,serif;--text:'Lora',Georgia,serif;--accent:'Cormorant Garamond',Georgia,serif;
-      --content:1320px;
-    }
-    *,*::before,*::after{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:98px}
-    body{margin:0;background:var(--cream);color:var(--ink);font:400 16px/1.8 var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:30;opacity:.024;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 150 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitchTiles'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-    ::selection{background:var(--gold);color:var(--green-deep)}
-    a{color:inherit;text-decoration:none}
-    a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
-    img{max-width:100%;display:block}
-    .wrap{width:min(var(--content),calc(100% - 104px));margin-inline:auto}
-    .flag{height:7px;display:grid;grid-template-columns:repeat(6,1fr);width:100%}
-    .flag i:nth-child(1){background:#007749}.flag i:nth-child(2){background:#FFB81C}.flag i:nth-child(3){background:#000}.flag i:nth-child(4){background:#fff}.flag i:nth-child(5){background:#E03C31}.flag i:nth-child(6){background:#001489}
-    .eyebrow{font:600 13px/1.5 var(--accent);letter-spacing:.23em;text-transform:uppercase}
-    .hairline{display:inline-block;height:1px;width:45px;background:currentColor;vertical-align:middle;opacity:.6;flex:none}
-    .site-header{position:sticky;top:0;z-index:20;background:rgba(253,248,243,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-    .nav{height:87px;display:flex;justify-content:space-between;align-items:center;gap:20px}
-    .brand{display:flex;align-items:center;gap:13px;min-width:0}
-    .logo{width:49px;height:49px;border:1px solid var(--green);border-radius:50%;display:grid;place-items:center;font:italic 600 30px/1 var(--accent);letter-spacing:-.08em;color:var(--green);padding-right:3px;flex-shrink:0}
-    .brand-lockup{display:grid;line-height:1.1;gap:6px}
-    .brand-title{font:600 19px/1.2 var(--display);color:var(--blue);letter-spacing:-.05em;white-space:nowrap}
-    .brand-sub{font:600 11px/1 var(--accent);letter-spacing:.28em;color:var(--green)}
-    .nav-actions{display:flex;align-items:center;gap:clamp(17px,2.5vw,38px)}
-    .nav-actions>a:not(.launch){font:500 12px/1.3 var(--text);color:#342d25;white-space:nowrap;transition:color .2s}
-    .nav-actions>a:hover:not(.launch){color:var(--green)}
-    .launch{display:inline-flex;align-items:center;gap:9px;background:#FFF1CC;border:1px solid #EFD38C;color:#654A04;padding:10px 15px;border-radius:3px;font:600 12px/1 var(--accent);letter-spacing:.16em;white-space:nowrap}
-    .launch::before{content:"";width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 0 4px rgba(0,119,73,.12)}
-
-    /* Main masthead: editorial typography and a framed photographic poster */
-    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 95% 6%,rgba(255,184,28,.16),transparent 30%),var(--cream)}
-    .hero::before{content:"SAVOUR";position:absolute;font:600 clamp(170px,21vw,400px)/.8 var(--accent);letter-spacing:-.04em;color:rgba(0,119,73,.035);left:-25px;bottom:-45px;pointer-events:none;white-space:nowrap}
-    .hero-grid{display:grid;grid-template-columns:minmax(0,1.07fr) minmax(0,.91fr);align-items:center;gap:clamp(60px,7.7vw,130px);padding-block:74px 102px;min-height:735px}
-    .hero-copy{position:relative;z-index:1;min-width:0}
-    .hero-kicker{display:flex;align-items:center;gap:14px;color:var(--green);margin-bottom:28px}
-    .hero h1{margin:0;max-width:760px;color:var(--blue);font:500 clamp(62px,6.5vw,102px)/1.1 var(--display);letter-spacing:-.068em;text-wrap:balance}
-    .hero h1 em{font-weight:400;color:var(--green);white-space:nowrap}
-    .hero .tagline{margin:27px 0 0;color:var(--green-deep);font:italic 500 clamp(25px,3vw,40px)/1.13 var(--accent);max-width:600px;text-wrap:balance}
-    .hero .intro{margin:25px 0 31px;max-width:560px;font-size:16px;line-height:1.95;color:var(--muted)}
-    .hero-actions{display:flex;align-items:center;gap:23px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:30px;justify-content:space-between;padding:16px 23px;border-radius:4px;background:var(--green);color:#fff;font:600 13px/1.15 var(--text);transition:background .2s,transform .2s;white-space:nowrap}
-    .btn:hover{background:#005C38;transform:translateY(-2px)}
-    .btn svg{width:18px;height:18px;flex:none}
-    .hero-annotation{font:500 12px/1.7 var(--accent);letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
-    .hero-footer{margin-top:clamp(48px,5.8vw,82px);display:flex;align-items:center;gap:15px;color:var(--green)}
-    .hero-footer span:last-child{font:600 12px/1.4 var(--accent);letter-spacing:.19em;text-transform:uppercase}
-    .hero-art{position:relative;align-self:center;max-width:550px;justify-self:end;width:100%;padding:14px;background:#fff;border:1px solid #DCCDB7;box-shadow:0 26px 52px rgba(15,42,32,.13),9px 13px 0 -3px #F6EEE2,10px 14px 0 -3px #DCCDB7;transform:rotate(1.1deg)}
-    .hero-art picture{display:block;overflow:hidden;background:var(--warm)}
-    .hero-art img{width:100%;aspect-ratio:1122/1402;height:auto;object-fit:cover}
-    .art-caption{position:absolute;bottom:-42px;left:0;color:var(--muted);font:600 12px/1.4 var(--accent);letter-spacing:.18em;text-transform:uppercase;transform:rotate(-1.1deg)}
-    .art-seal{position:absolute;top:-25px;right:-24px;width:96px;height:96px;display:flex;justify-content:center;align-items:center;transform:rotate(11deg);border-radius:50%;background:var(--gold);color:var(--green-deep);border:1px solid #E9A80A;box-shadow:0 8px 20px rgba(0,0,0,.12);font:600 14px/1.2 var(--accent);letter-spacing:.1em;text-transform:uppercase;text-align:center}
-    .art-seal::after{content:"";position:absolute;inset:6px;border:1px dashed rgba(15,42,32,.5);border-radius:50%}
-
-    .marquee{background:var(--green-deep);color:var(--on-dark);overflow:hidden}
-    .marquee-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:73px}
-    .marquee b{font:600 clamp(12px,1.13vw,15px)/1.4 var(--accent);text-transform:uppercase;letter-spacing:.19em;white-space:nowrap}
-    .marquee .star{font:500 23px/1 var(--accent);color:var(--gold)}
-
-    .section{padding-block:clamp(95px,10vw,148px)}
-    .section-label{display:flex;align-items:center;gap:13px;color:var(--green)}
-    h2{font:500 clamp(40px,4.4vw,66px)/1.18 var(--display);letter-spacing:-.057em;color:var(--blue);text-wrap:balance}
-    h2 em{color:var(--green);font-weight:400}
-    .essence-grid{display:grid;grid-template-columns:.98fr 1fr;column-gap:clamp(80px,12vw,160px);align-items:start}
-    .essence h2{margin:22px 0 0;max-width:720px}
-    .essence-right{padding-top:59px;max-width:570px}
-    .essence-right .pull{font:italic 500 clamp(27px,3.2vw,40px)/1.18 var(--accent);color:var(--green);margin:0 0 29px}
-    .essence-right p:not(.pull){color:var(--muted);margin:0 0 17px;line-height:2}
-    .essence-signature{margin-top:30px;display:flex;align-items:center;gap:13px;color:var(--green);font:600 12px var(--accent);letter-spacing:.2em;text-transform:uppercase}
-
-    .experiences{background:var(--warm);border-block:1px solid var(--line)}
-    .exp-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:51px}
-    .exp-head h2{margin:17px 0 0;max-width:720px}
-    .exp-head>p{max-width:360px;font-size:14px;line-height:1.95;color:var(--muted);margin:0 0 6px}
-    .exp-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid #DCCEBA;background:var(--cream)}
-    .exp-card{min-height:370px;padding:34px clamp(30px,3.3vw,52px) 40px;display:flex;flex-direction:column;position:relative;transition:background .2s}
-    .exp-card+.exp-card{border-left:1px solid #DCCEBA}
-    .exp-card:hover{background:#fffdf8}
-    .exp-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
-    .exp-number{font:600 13px/1 var(--accent);letter-spacing:.19em}
-    .exp-symbol{font:500 50px/1 var(--accent);color:var(--green);display:inline-block}
-    .exp-card:nth-child(2) .exp-symbol{color:#C68E18}
-    .exp-card:nth-child(3) .exp-symbol{color:var(--red)}
-    .exp-card h3{margin:91px 0 13px;font:500 clamp(32px,3.1vw,46px)/1.13 var(--display);letter-spacing:-.055em;color:var(--blue)}
-    .exp-card p{margin:0;max-width:330px;font-size:14px;color:var(--muted);line-height:1.85}
-    .exp-footer{margin-top:35px;display:flex;flex-wrap:wrap;gap:9px}
-    .tag{border:1px solid #D5C8B4;background:#fff9ee;border-radius:999px;padding:6px 12px;font:600 12px/1.3 var(--accent);letter-spacing:.06em;color:var(--green-deep)}
-
-    .how{background:var(--green-deep);color:var(--on-dark);position:relative;overflow:hidden}
-    .how::before{content:"N";font:italic 500 600px/1 var(--accent);position:absolute;right:-35px;top:-160px;color:rgba(255,255,255,.028);pointer-events:none}
-    .how h2{color:#F9F1E4;max-width:920px;margin:21px 0 23px}
-    .how h2 em{color:var(--gold)}
-    .how .how-lede{color:#D4DCCA;max-width:700px;margin:0 0 57px;font-size:16px}
-    .how .section-label{color:var(--gold)}
-    .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px}
-    .step{border-top:1px solid rgba(255,184,28,.85);padding-top:26px}
-    .step span{color:var(--gold);font:600 12px var(--accent);letter-spacing:.2em}
-    .step h3{color:#fff;font:500 31px/1.1 var(--display);margin:17px 0 12px}
-    .step p{color:#C7D1C7;font-size:14px;line-height:1.9;margin:0;max-width:340px}
-    .how-quote{border-left:2px solid var(--gold);padding-left:27px;color:#F4E4C6;font:italic 500 clamp(25px,3.4vw,39px)/1.3 var(--accent);margin:73px 0 0;max-width:850px}
-
-    .letter{background:radial-gradient(circle at 95% 50%,rgba(255,184,28,.14),transparent 30%),var(--cream)}
-    .letter-inner{display:grid;grid-template-columns:1fr auto;align-items:end;gap:36px}
-    .letter h2{margin:19px 0 20px;max-width:750px}
-    .letter p{color:var(--muted);max-width:640px;margin:0;font-size:15px;line-height:1.9}
-    .letter-cta{display:flex;align-items:center;flex-direction:column;gap:13px;justify-self:end;min-width:280px;margin-bottom:11px}
-    .letter-cta .btn{width:100%;justify-content:space-between}
-    .letter-cta .micro{font:500 12px/1.3 var(--accent);color:var(--muted);letter-spacing:.05em;text-align:center}
-
-    /* Insider signup: editorial paper form rather than a generic newsletter card */
-    [hidden]{display:none!important}
-    .hero-side-link{font:600 13px/1.4 var(--text);color:var(--green);text-decoration:underline;text-underline-offset:6px;text-decoration-color:#A0B7A3;white-space:nowrap}
-    .hero-side-link:hover{color:var(--blue)}
-    .letter{background:radial-gradient(circle at 95% 50%,rgba(255,184,28,.14),transparent 30%),var(--cream)}
-    .letter-inner{display:grid;grid-template-columns:minmax(0,.98fr) minmax(0,1fr);align-items:center;gap:clamp(50px,8vw,126px)}
-    .letter h2{margin:19px 0 22px;max-width:660px}
-    .letter-copy>p{color:var(--muted);max-width:560px;margin:0 0 19px;font-size:15px;line-height:1.9}
-    .letter .letter-lede{font:italic 500 clamp(29px,3.2vw,41px)/1.15 var(--accent);color:var(--green);max-width:480px;margin-bottom:23px}
-    .insider-perks{margin:41px 0 39px;border-top:1px solid #D7CCB8;max-width:515px}
-    .insider-perks>div{display:grid;grid-template-columns:46px 1fr;gap:16px;align-items:start;border-bottom:1px solid #D7CCB8;padding:16px 0}
-    .insider-perks>div>span{font:600 13px/1.7 var(--accent);color:var(--green);letter-spacing:.12em}
-    .insider-perks p{margin:0;color:var(--muted);font:400 14px/1.75 var(--text)}
-    .insider-perks strong{color:var(--green-deep);font-weight:600}
-    .letter-signoff{display:flex;align-items:center;gap:14px;font:600 12px/1.4 var(--accent);letter-spacing:.2em;text-transform:uppercase;color:var(--green)}
-    .insider-card{position:relative;min-width:0;background:#fffdf9;border:1px solid #D7CAB7;padding:clamp(29px,3.5vw,52px);box-shadow:14px 15px 0 -2px #F6EEE2,15px 16px 0 -2px #DACAB3,0 22px 42px rgba(15,42,32,.09)}
-    .form-overline{font:600 13px/1.5 var(--accent);text-transform:uppercase;letter-spacing:.22em;color:var(--green);display:flex;justify-content:space-between;gap:8px;align-items:center}
-    .form-overline span{font-size:23px;color:#B98A0F}
-    .form-topline{height:1px;background:#DFD1BA;margin:13px 0 23px}
-    .insider-card h3{font:500 clamp(35px,3.3vw,49px)/1.12 var(--display);letter-spacing:-.06em;color:var(--blue);margin:0 0 12px}
-    .insider-card h3 em{color:var(--green);font-weight:400}
-    .insider-card .form-subtitle{font:400 14px/1.85 var(--text);color:var(--muted);margin:0 0 30px;max-width:490px}
-    .insider-form{display:grid;gap:23px}
-    .insider-fields{display:grid;gap:20px}
-    .insider-field{display:grid;gap:8px}
-    .insider-field label,.insider-interest legend{font:600 12px/1.4 var(--text);color:var(--green-deep)}
-    .insider-field label small{font:italic 400 12px var(--accent);color:#797266;margin-left:5px}
-    .required{color:#B3261E}
-    .insider-field input{width:100%;min-width:0;border:1px solid #BFC7BD;border-radius:3px;background:#fff;padding:14px 15px;font:400 15px/1.4 var(--text);color:var(--ink);outline:0;transition:box-shadow .18s,border-color .18s}
-    .insider-field input::placeholder{color:#877F72}
-    .insider-field input:focus-visible{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,119,73,.14)}
-    .insider-interest{padding:0;border:0;margin:0;min-width:0}
-    .insider-interest legend{padding:0;margin-bottom:12px}
-    .interest-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-    .interest-choice{position:relative;cursor:pointer;display:block;min-width:0}
-    .interest-choice input{position:absolute;width:1px;height:1px;opacity:0;left:50%;top:50%;margin:0}
-    .interest-choice span{display:grid;place-items:center;min-height:56px;text-align:center;background:#FDF8F3;border:1px solid #D6CBBA;padding:9px 8px;border-radius:3px;font:600 12px/1.4 var(--accent);color:var(--green-deep);transition:background .18s,border-color .18s}
-    .interest-choice input:checked+span{background:#E3F1EA;border-color:var(--green);box-shadow:inset 0 0 0 1px var(--green);color:#004E30}
-    .interest-choice input:focus-visible+span{outline:3px solid var(--blue);outline-offset:3px}
-    .consent{display:flex;align-items:flex-start;gap:11px;cursor:pointer;font:400 12px/1.7 var(--text);color:#5E5A50}
-    .consent input{width:18px;height:18px;min-width:18px;accent-color:var(--green);margin:2px 0 0;cursor:pointer}
-    .insider-submit{width:100%;padding:17px 20px;border:0;cursor:pointer;text-align:left;min-height:55px}
-    .insider-submit:disabled{opacity:.65;cursor:wait;transform:none}
-    .insider-status{margin:-10px 0 0;padding:12px 14px;background:#FFF1CC;border-left:3px solid #B3261E;color:#532D22;font:500 13px/1.65 var(--text)}
-    .privacy-note{margin:-8px 0 0!important;color:#6C665D!important;font:400 11px/1.7 var(--text)!important}
-    .honeypot{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-    .thanks{padding:17px 0 8px}
-    .thanks-mark{width:59px;height:59px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--green-deep);font-size:36px;margin-bottom:23px}
-    .thanks h4{margin:0 0 14px;color:var(--blue);font:500 33px/1.2 var(--display);letter-spacing:-.05em}
-    .thanks p{font:400 15px/1.8 var(--text);color:var(--muted);margin:0 0 24px}
-    .thanks-link{font:600 13px var(--text);color:var(--green);text-decoration:underline;text-underline-offset:5px}
-
-    .footer{border-top:1px solid var(--line);padding:27px 0 32px}
-    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    .footer-brand{font:600 17px/1.1 var(--display);color:var(--blue);letter-spacing:-.04em}
-    .footer-details{font:500 12px/1.4 var(--accent);letter-spacing:.12em;color:var(--muted)}
-    .footer a{text-decoration:underline;text-underline-offset:4px;color:var(--green)}
-    .footer a:hover{color:var(--blue)}
-
-    @media(max-width:1180px){
-      .wrap{width:min(var(--content),calc(100% - 76px))}
-      .hero-grid{gap:58px;min-height:unset}
-      .hero h1{font-size:clamp(57px,6.8vw,83px)}
-      .hero .tagline{font-size:31px}
-      .hero-art{max-width:480px}
-      .essence-grid{column-gap:72px}
-    }
-    @media(max-width:850px){
-      .wrap{width:calc(100% - 52px)}
-      .nav{height:78px}
-      .nav-actions>a:not(.launch){display:none}
-      .hero-grid{grid-template-columns:1fr;gap:61px;padding-block:64px 85px}
-      .hero h1{max-width:720px;font-size:clamp(61px,9.2vw,87px)}
-      .hero .tagline{font-size:clamp(27px,4.4vw,36px)}
-      .hero .intro{max-width:640px}
-      .hero-footer{margin-top:42px}
-      .hero-art{justify-self:center;max-width:560px;width:min(100% - 30px,560px)}
-      .art-seal{right:-17px}
-      .marquee-inner{width:max-content;min-width:100%;padding-inline:25px;gap:30px}
-      .essence-grid{grid-template-columns:1fr;gap:24px}
-      .essence-right{padding-top:0}
-      .exp-head{display:block}
-      .exp-head>p{margin-top:18px}
-      .exp-card{padding:29px 22px 31px;min-height:335px}
-      .exp-card h3{margin-top:80px;font-size:32px}
-      .letter-inner{grid-template-columns:1fr}
-      .letter-cta{justify-self:start;max-width:330px;width:100%}
-    }
-    @media(max-width:640px){
-      .wrap{width:calc(100% - 40px)}
-      .nav{height:74px}
-      .logo{height:41px;width:41px;font-size:25px}
-      .brand{gap:9px}
-      .brand-title{font-size:15px}
-      .brand-sub{font-size:9px}
-      .launch{padding:9px 10px;font-size:10px;letter-spacing:.08em}
-      .hero-grid{gap:50px;padding-top:55px;padding-bottom:87px}
-      .hero-kicker{font-size:12px;gap:9px;margin-bottom:25px}
-      .hero-kicker .hairline{width:24px}
-      .hero h1{font-size:clamp(49px,11.2vw,69px);letter-spacing:-.06em}
-      .hero h1 em{white-space:normal}
-      .hero .tagline{font-size:27px;margin-top:24px}
-      .hero .intro{font-size:14px;line-height:1.85}
-      .hero-annotation{font-size:10px}
-      .hero-art{width:calc(100% - 16px);padding:9px}
-      .art-seal{width:77px;height:77px;top:-17px;right:-10px;font-size:11px}
-      .art-caption{font-size:10px;bottom:-30px}
-      .marquee-inner{min-height:62px}
-      .marquee b{font-size:12px}
-      .section{padding-block:81px}
-      h2{font-size:clamp(39px,8.4vw,54px)}
-      .essence-right .pull{font-size:31px}
-      .exp-head{margin-bottom:34px}
-      .exp-grid{grid-template-columns:1fr}
-      .exp-card{min-height:250px;padding:26px 30px 30px}
-      .exp-card+.exp-card{border-left:0;border-top:1px solid #DCCEBA}
-      .exp-card h3{margin-top:35px}
-      .exp-symbol{font-size:41px}
-      .steps{grid-template-columns:1fr;gap:28px}
-      .step{padding-top:20px}
-      .how-quote{margin-top:53px;padding-left:19px;font-size:28px}
-      .letter-cta{max-width:none}
-    }
-    @media(max-width:385px){
-      .wrap{width:calc(100% - 30px)}
-      .brand-title{font-size:13px}
-      .brand-sub{font-size:8px}
-      .logo{width:37px;height:37px}
-      .launch{font-size:9px;gap:6px;padding:8px 7px}
-      .hero h1{font-size:clamp(43px,11.6vw,52px)}
-      .hero-actions{gap:17px}
-      .btn{padding:15px 17px}
-    }
-
-    @media(max-width:1050px){
-      .letter-inner{grid-template-columns:1fr 1fr;gap:36px}
-      .insider-card{padding:30px}
-      .interest-options{grid-template-columns:1fr}
-      .interest-choice span{min-height:42px}
-    }
-    @media(max-width:850px){
-      .letter-inner{grid-template-columns:1fr;gap:39px}
-      .letter-copy{max-width:720px}
-      .insider-card{max-width:680px;width:100%}
-      .interest-options{grid-template-columns:repeat(3,minmax(0,1fr))}
-    }
-    @media(max-width:640px){
-      .hero-side-link{font-size:12px}
-      .insider-card{padding:26px 22px;box-shadow:8px 9px 0 -2px #F6EEE2,9px 10px 0 -2px #DACAB3}
-      .interest-options{grid-template-columns:1fr}
-      .interest-choice span{min-height:42px}
-      .insider-perks{margin-top:30px}
-    }
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition-duration:0s!important}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#15231e">
+<meta name="description" content="Beyond the obvious South Africa: unexpected people, hidden places, slow conversations. Describe the kind of moment you long for and discover what might be possible.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nibblesiprepeat.com/">
+<meta property="og:title" content="Nibble, Sip, Repeat — The secret is the people.">
+<meta property="og:description" content="Less itinerary. More connection. Extraordinary people, secret places and beautiful, unhurried South African moments.">
+<meta property="og:image" content="https://www.nibblesiprepeat.com/assets/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<title>Nibble, Sip, Repeat — The Secret Is the People</title>
+<style>
+:root{--ink:#101d18;--cream:#f9efe2;--sand:#edcfaa;--gold:#e7b681;--muted:#ddd2c1;--line:rgba(255,240,222,.27);--serif:'EB Garamond',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--ink);scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--cream);font-family:var(--sans);font-size:15px;-webkit-font-smoothing:antialiased}
+button,textarea,input{font:inherit}button{cursor:pointer}
+button:focus-visible,textarea:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid #f6d199;outline-offset:3px}
+a{color:inherit;text-decoration:none}
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.site{min-height:100vh;min-height:100svh;max-width:2300px;margin:auto;position:relative;display:flex;flex-direction:column;overflow:hidden;isolation:isolate;background:#2e2924}
+.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 54%;z-index:-3;animation:drift 25s ease-in-out infinite alternate}
+@keyframes drift{from{transform:scale(1)}to{transform:scale(1.045)}}
+.site::before{content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(90deg,rgba(10,25,20,.96) 0%,rgba(13,28,23,.9) 22%,rgba(12,26,22,.62) 44%,rgba(13,25,22,.13) 70%,rgba(8,19,17,.12) 100%),linear-gradient(0deg,rgba(9,23,18,.9) 0%,rgba(10,22,17,.37) 25%,transparent 51%,rgba(12,18,16,.37) 100%)}
+.site::after{content:"";pointer-events:none;position:absolute;inset:0;z-index:5;opacity:.15;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E")}
+.mini-strip{height:6px;display:flex;flex:none;background:#bb775d}.mini-strip span:nth-child(1){background:#bd7759;width:26%}.mini-strip span:nth-child(2){background:#ddb37c;width:20%}.mini-strip span:nth-child(3){background:#f0d4a7;width:15%}.mini-strip span:nth-child(4){background:#697c61;width:39%}
+.header{height:93px;flex:none;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 clamp(22px,5.2vw,82px);border-bottom:1px solid rgba(248,224,185,.23);position:relative;z-index:6}
+.brand{display:inline-flex;align-items:center;gap:13px;min-width:0}.brand-mark{flex:none;display:grid;place-items:center;width:40px;height:40px;border:1px solid rgba(243,195,140,.85);border-radius:50%;font:italic 32px/.8 var(--serif);color:#f0ba86;padding-right:4px;letter-spacing:-.15em}
+.brand-name{display:block;font:500 clamp(21px,1.7vw,27px)/1 var(--serif);white-space:nowrap;letter-spacing:-.03em}.brand-location{display:block;margin-top:8px;color:var(--gold);font:700 8px/1.3 var(--sans);letter-spacing:.21em;text-transform:uppercase}
+.header-middle{font:700 10px/1.5 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:rgba(246,230,206,.8)}
+.header-cta{padding:12px 16px;display:inline-flex;align-items:center;gap:19px;border:1px solid rgba(245,209,166,.63);background:rgba(15,28,22,.17);color:#f8e2c5;font:700 10px/1.1 var(--sans);text-transform:uppercase;letter-spacing:.14em;white-space:nowrap;transition:background .2s}.header-cta:hover{background:rgba(242,184,119,.23)}
+.hero{flex:1;display:flex;flex-direction:column;justify-content:space-between;position:relative;z-index:3;min-height:0}
+.hero-top{display:flex;justify-content:space-between;gap:30px;align-items:center;padding:clamp(38px,6.4vh,78px) clamp(22px,5.2vw,82px) 20px}
+.story{max-width:730px}.eyebrow{display:flex;align-items:center;gap:13px;color:#efc596;font:700 10px/1.5 var(--sans);letter-spacing:.22em;text-transform:uppercase}.eyebrow::before{content:"";width:32px;height:1px;background:#e1b37c}
+.story h1{margin:20px 0 0;font:400 clamp(76px,7.1vw,114px)/.84 var(--serif);letter-spacing:-.055em;text-wrap:balance;text-shadow:0 2px 16px rgba(0,0,0,.08)}
+.story h1 span{display:block}.story h1 em{font-weight:400;color:#f0ba86;letter-spacing:-.045em}
+.story-description{margin:27px 0 0;max-width:475px;font-size:clamp(14px,1.06vw,17px);line-height:1.75;color:#f0e5d6;font-weight:400}
+.story-description strong{font-weight:700;color:#f9efe1}
+.whisper{display:flex;align-items:center;gap:12px;margin-top:23px;color:#f2cc9a;font:italic 25px/1 var(--serif)}.whisper::after{content:"";width:52px;height:1px;background:rgba(240,194,141,.67)}
+.photo-note{align-self:flex-end;margin-right:1vw;margin-top:120px;color:#fff3de;max-width:285px;text-align:center;transform:rotate(-4deg);text-shadow:0 2px 12px rgba(0,0,0,.75);font:italic 29px/1.08 var(--serif);pointer-events:none}
+.photo-note span{display:block;margin:10px auto 0;width:58px;border-bottom:1px solid #e9bb83}
+.bottom{width:100%;padding:0 clamp(22px,5.2vw,82px) 25px}
+.dream-card{max-width:1118px;margin:0 auto;padding:17px 21px 14px;background:rgba(12,24,19,.86);border:1px solid rgba(248,222,185,.51);box-shadow:0 14px 55px rgba(4,13,10,.38);backdrop-filter:blur(16px);border-radius:4px}
+.dream-top{display:flex;align-items:center;gap:12px;padding-bottom:10px}.spark{display:grid;place-items:center;flex:none;border:1px solid rgba(249,216,177,.53);border-radius:50%;color:#f0c48e;width:36px;height:36px;font:24px/1 var(--serif)}.dream-heading{display:block;font:700 10px/1.4 var(--sans);color:var(--sand);letter-spacing:.19em;text-transform:uppercase}.dream-sub{display:block;margin-top:3px;font:italic 18px/1.2 var(--serif);color:#efe6d9}.dream-index{margin-left:auto;white-space:nowrap;font:700 9px/1.2 var(--sans);letter-spacing:.17em;color:rgba(242,218,184,.7)}
+.ask-row{display:flex;gap:12px;align-items:stretch;margin-top:4px}
+.ask-row textarea{width:100%;min-width:0;max-height:95px;min-height:54px;padding:14px 17px;border:1px solid rgba(241,217,181,.42);border-radius:0;background:rgba(255,246,232,.085);color:white;resize:vertical;line-height:1.45;font-size:14px}.ask-row textarea::placeholder{color:rgba(255,240,221,.79)}
+.ask-submit{display:flex;align-items:center;justify-content:center;gap:15px;background:#ecc296;color:#1a261e;border:1px solid #ecc296;white-space:nowrap;padding:0 24px;min-width:175px;font:700 10px/1.35 var(--sans);text-transform:uppercase;letter-spacing:.14em;transition:background .2s,transform .2s}.ask-submit:hover{background:#f8d2a9;transform:translateY(-1px)}.ask-submit .arrow{font:400 24px/1 var(--serif)}
+.sparks{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:12px}.sparks-label{color:#d8c5ae;font:700 9px/1 var(--sans);text-transform:uppercase;letter-spacing:.14em;margin-right:4px}.spark-chip{border:1px solid rgba(230,200,167,.42);color:#f3e1cd;background:rgba(255,255,255,.035);border-radius:999px;padding:7px 12px;font:600 10px/1 var(--sans);transition:background .2s,border-color .2s}.spark-chip:hover{background:rgba(235,190,139,.18);border-color:#efc292}
+.form-error-inline{margin:9px 0 0;font-size:12px;color:#ffd4c3}
+.below{max-width:1118px;margin:13px auto 0;display:flex;align-items:center;justify-content:space-between;gap:15px;color:rgba(247,223,190,.89);text-transform:uppercase;font:700 9px/1.5 var(--sans);letter-spacing:.14em}
+.below span:last-child{text-align:right}.below button{background:none;border:0;border-bottom:1px solid rgba(247,220,188,.8);padding:2px 0;color:#f1d9b9;font:700 9px/1.5 var(--sans);letter-spacing:.13em;text-transform:uppercase}
+/* Dialogs keep the experience on one page */
+dialog{border:0;padding:0;max-height:min(92vh,880px);max-height:min(92dvh,880px);width:min(890px,calc(100vw - 32px));background:#efe5d5;color:#243329;box-shadow:0 36px 100px rgba(0,0,0,.56);overscroll-behavior:contain}
+dialog::backdrop{background:rgba(8,19,15,.77);backdrop-filter:blur(8px)}.modal-frame{display:grid;grid-template-columns:.88fr 1.12fr;min-height:420px}
+.modal-story{background:#243629;color:#f4eadd;padding:46px 35px;display:flex;flex-direction:column;justify-content:space-between;gap:35px;position:relative;overflow:hidden}.modal-story::before{content:"";inset:0;position:absolute;pointer-events:none;background:radial-gradient(circle at 100% 0%,rgba(242,179,109,.25),transparent 60%)}.modal-story>*{position:relative}.modal-index{font:700 9px/1.5 var(--sans);text-transform:uppercase;letter-spacing:.19em;color:#e7b580}.modal-story h2{font:400 clamp(46px,4vw,64px)/.92 var(--serif);letter-spacing:-.045em;margin:27px 0 18px}.modal-story h2 em{font-weight:400;color:#e8b583}.modal-story p{font:400 14px/1.7 var(--sans);color:#e5d6c4;max-width:25ch}.modal-sig{font:italic 23px/1.1 var(--serif);color:#e9b987}
+.modal-body{position:relative;padding:45px 44px 37px;overflow:auto;max-height:90dvh}.modal-close{position:absolute;right:19px;top:17px;background:none;border:0;font:400 28px/1 var(--serif);color:#37473c;padding:3px 8px}.modal-close:hover{color:#a36b48}
+.modal-kicker{font:700 10px/1.5 var(--sans);text-transform:uppercase;letter-spacing:.18em;color:#866342}.modal-title{font:400 clamp(35px,3vw,49px)/1.03 var(--serif);margin:15px 0 16px;color:#1d3528;letter-spacing:-.025em}.modal-lede{font:400 14px/1.68 var(--sans);color:#4e5c51}.status{display:flex;gap:10px;align-items:center;color:#44604b;font-size:13px;margin:19px 0}.pulse{display:block;width:9px;height:9px;border:2px solid #bc895d;border-radius:50%;animation:pulse 1s infinite alternate}@keyframes pulse{from{opacity:.4;transform:scale(.85)}to{opacity:1;transform:scale(1.15)}}
+.letter{margin-top:18px;border-left:2px solid #b8835d;padding-left:19px;color:#304237}.letter h3{font:italic 36px/1.02 var(--serif);margin:0 0 13px;color:#9e6947}.letter p{white-space:pre-line;font:400 14px/1.75 var(--sans);margin:0}.letter-note{font:italic 21px/1.15 var(--serif);color:#a16b4b;margin:22px 0 0}.privacy{font-size:11px;color:#7d8276;line-height:1.5;margin:12px 0 0}
+.modal-actions{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-top:26px}.btn-dark{background:#203a2c;color:#f7e9d6;border:1px solid #203a2c;padding:15px 17px;text-transform:uppercase;letter-spacing:.11em;font:700 10px/1.5 var(--sans)}.btn-dark:hover{background:#39523f}.link-dark{border:0;border-bottom:1px solid #777c6d;color:#435344;background:none;padding:9px 0;text-transform:uppercase;letter-spacing:.1em;font:700 9px/1.5 var(--sans)}
+.ai-error{padding:18px;background:#e4d7c4;border-left:2px solid #bc895d;color:#334b39;font:400 14px/1.7 var(--sans)}
+/* Insider form */
+.form-fields{display:grid;gap:16px;margin-top:25px}.field{display:grid;gap:7px;color:#4b5147;font:700 10px/1.5 var(--sans);letter-spacing:.13em;text-transform:uppercase}.field input,.field textarea{padding:12px 13px;border-radius:0;border:1px solid #b9b4a6;background:#f9f5eb;color:#1d3327;min-width:0;letter-spacing:normal;text-transform:none;font:400 15px/1.5 var(--sans)}.field textarea{min-height:76px;resize:vertical}.check{display:flex;gap:11px;align-items:start;cursor:pointer;color:#4c5147;font:400 12px/1.6 var(--sans)}.check input{accent-color:#355640;flex:none;margin-top:3px}.form-notice{font:400 12px/1.5 var(--sans);color:#78766d;margin:0}.form-error{color:#9e402b;font-size:12px;margin:0}.form-success{text-align:left;padding-top:16px}.form-success .star{font:52px/1 var(--serif);color:#ab774a}.form-success h3{font:400 45px/1 var(--serif);margin:12px 0}.form-success p{font-size:14px;line-height:1.75}
+.hp{display:none!important}
+@media(max-width:1200px){.photo-note{display:none}.header-middle{display:none}.story h1{font-size:clamp(69px,7.7vw,108px)}.hero-top{padding-top:clamp(28px,5.3vh,55px)}.whisper{margin-top:14px}.story-description{max-width:475px}}
+@media(max-width:780px){.header{height:78px;padding:0 25px}.brand-mark{width:36px;height:36px}.header-cta{font-size:9px;padding:12px}.site::before{background:linear-gradient(180deg,rgba(12,28,22,.77) 0%,rgba(13,28,23,.8) 31%,rgba(12,26,22,.67) 53%,rgba(9,21,18,.89) 100%)}.photo{object-position:61% 50%}.hero-top{padding:42px 25px 18px}.story h1{font-size:clamp(65px,10vw,90px)}.story-description{max-width:465px}.bottom{padding:0 25px 22px}.dream-index{display:none}.below span:last-child{display:none}.modal-frame{grid-template-columns:1fr}.modal-story{display:none}.modal-body{padding:45px 31px 31px}.dream-card{padding:15px}}
+@media(max-width:560px){.site{min-height:100svh;overflow:auto}.photo{object-position:64% center}.header{height:72px;padding:0 20px}.brand-mark{width:34px;height:34px}.brand-name{font-size:21px}.brand-location{font-size:7px}.header-cta{font-size:8px;padding:11px;gap:8px}.header-cta span:first-child{display:none}.header-cta span:last-child{display:inline}.header-cta::before{content:"JOIN";font-size:8px}.hero-top{padding:29px 22px 20px}.eyebrow{font-size:8px;letter-spacing:.15em}.eyebrow::before{width:21px}.story h1{font-size:clamp(56px,15vw,76px);margin-top:18px}.story-description{font-size:14px;line-height:1.6;max-width:355px;margin-top:19px}.whisper{font-size:21px;margin-top:15px}.bottom{padding:0 16px 17px}.dream-card{padding:14px 14px 13px}.dream-top{padding-bottom:8px}.dream-heading{font-size:9px;letter-spacing:.13em}.dream-sub{font-size:16px}.spark{width:32px;height:32px}.ask-row{gap:8px}.ask-row textarea{font-size:13px;min-height:78px;padding:12px;resize:none}.ask-submit{min-width:54px;width:54px;padding:0}.ask-submit .ask-label{display:none}.ask-submit .arrow{font-size:30px}.sparks{gap:7px}.spark-chip{font-size:9px;padding:7px 10px}.sparks-label{display:none}.below{font-size:8px;margin-top:11px}.below button{font-size:8px}.modal-body{padding:44px 23px 29px}.modal-title{font-size:40px}.letter h3{font-size:35px}}
+@media(max-width:390px){.story h1{font-size:clamp(53px,14.8vw,60px)}.story-description{font-size:13px}.header-cta{padding:10px}.brand{gap:7px}.brand-name{font-size:19px}.spark-chip{padding:6px 8px}.dream-sub{font-size:14px}.dream-card{padding:12px}.hero-top{padding-top:22px}.story-description{margin-top:13px}}
+@media(max-height:790px) and (min-width:781px){.header{height:76px}.hero-top{padding-top:22px}.story h1{font-size:clamp(64px,6.5vw,95px);margin-top:13px}.story-description{margin-top:16px;line-height:1.55}.whisper{margin-top:10px}.bottom{padding-bottom:13px}.dream-card{padding-top:12px}.sparks{margin-top:7px}.below{margin-top:8px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
-<body id="top">
-  <div class="flag" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-  <header class="site-header">
-    <nav class="nav wrap" aria-label="Main navigation">
-      <a href="#top" class="brand" aria-label="Nibble, Sip, Repeat, South Africa — back to top">
-        <span class="logo" aria-hidden="true">N.</span>
-        <span class="brand-lockup"><span class="brand-title">Nibble, Sip, Repeat</span><span class="brand-sub">SOUTH AFRICA</span></span>
-      </a>
-      <div class="nav-actions">
-        <a href="#our-essence">Our essence</a>
-        <a href="#first-taste">Experiences</a>
-        <a href="#keep-in-touch" class="launch">GET FIRST DIBS</a>
-      </div>
-    </nav>
+<body>
+<div class="site">
+  <img class="photo" src="assets/people-at-the-table.webp" alt="Friends meeting face to face around a warm outdoor table in a South African-inspired sunset scene" fetchpriority="high">
+  <div class="mini-strip" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <header class="header">
+    <a class="brand" href="/" aria-label="Nibble, Sip, Repeat home"><span class="brand-mark">n.</span><span><span class="brand-name">Nibble, Sip, Repeat.</span><span class="brand-location">South Africa · The beautifully uncommon</span></span></a>
+    <span class="header-middle">Fewer plans. Deeper connections.</span>
+    <button class="header-cta" type="button" aria-label="Get the first invitation" data-invite><span>Get the first invitation</span><span aria-hidden="true">↗</span></button>
   </header>
-
-  <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow hero-kicker"><span class="hairline" aria-hidden="true"></span>South Africa · Winelands · Long tables</div>
-          <h1 id="hero-title">Something <em>delicious</em> is coming.</h1>
-          <p class="tagline">Savouring the soul of South Africa, one sip and nibble at a time.</p>
-          <p class="intro">We’re setting the table for a new way to discover food, wine and experiences worth travelling for. From vineyard lunches and market mornings to unexpected local treasures — a little more flavour, a little less ordinary.</p>
-          <div class="hero-actions">
-            <a href="#keep-in-touch" class="btn">Get first dibs <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></a>
-            <a class="hero-side-link" href="#first-taste">Explore what’s coming <span aria-hidden="true">↗</span></a>
-          </div>
-          <div class="hero-footer"><span class="hairline" aria-hidden="true"></span><span>Come hungry. Stay a while.</span></div>
-        </div>
-        <figure class="hero-art" style="margin:0">
-          <picture>
-            <source srcset="assets/nibble-sip-repeat-poster.webp" type="image/webp">
-            <img src="assets/nibble-sip-repeat-poster.png" width="1122" height="1402" alt="A South African food and wine scene, with a grazing board, protea flowers, white wine and a coastal view, under the words Nibble. Sip. Repeat. South Africa" fetchpriority="high">
-          </picture>
-          <span class="art-seal" aria-hidden="true">A taste<br>of what’s<br>to come</span>
-          <figcaption class="art-caption">01 — An invitation to savour more</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <div class="marquee" aria-label="Wine, food, long tables and local stories">
-      <div class="wrap marquee-inner">
-        <b>Great food</b><span class="star" aria-hidden="true">✳</span>
-        <b>Long tables</b><span class="star" aria-hidden="true">✳</span>
-        <b>Good wine</b><span class="star" aria-hidden="true">✳</span>
-        <b>Local stories</b><span class="star" aria-hidden="true">✳</span>
-        <b>One more sip</b>
-      </div>
+  <main class="hero">
+    <div class="hero-top">
+      <section class="story" aria-labelledby="hero-title">
+        <div class="eyebrow">Private discoveries / No. 001</div>
+        <h1 id="hero-title"><span>The secret</span><span>is the <em>people.</em></span></h1>
+        <p class="story-description">Not the pin on a map. <strong>The conversation that runs late.</strong> The stranger who saves you a seat. The unexpected South African moment that makes you forget to look at your phone.</p>
+        <div class="whisper">Less scrolling. More living.</div>
+      </section>
+      <div class="photo-note" aria-hidden="true">The kind of evening you don't want to end.<span></span></div>
     </div>
-
-    <section class="section essence" id="our-essence" aria-labelledby="essence-title">
-      <div class="wrap essence-grid">
-        <div>
-          <div class="eyebrow section-label"><span class="hairline" aria-hidden="true"></span>Our essence</div>
-          <h2 id="essence-title">A place at the <em>table.</em> A story in every glass.</h2>
-        </div>
-        <div class="essence-right">
-          <p class="pull">“Here a meal is a gathering and a glass is a story.”</p>
-          <p>Long tables set between the vines. Braai smoke over a Karoo evening. A winemaker pouring something that has never left the farm.</p>
-          <p>We’re bringing together the people, places and flavours that make South Africa so special. Small groups, slow afternoons, memorable discoveries — and always room for one more.</p>
-          <div class="essence-signature"><span class="hairline" aria-hidden="true"></span>Made for the curious and the hungry</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section experiences" id="first-taste" aria-labelledby="taste-title">
-      <div class="wrap">
-        <div class="exp-head">
-          <div><div class="eyebrow section-label"><span class="hairline" aria-hidden="true"></span>A taste of what’s to come</div><h2 id="taste-title">Come hungry. <em>Stay a while.</em></h2></div>
-          <p>Think of this as a little peek at the menu. Our first experiences are still being curated; dates and reservations will follow.</p>
-        </div>
-        <div class="exp-grid">
-          <article class="exp-card">
-            <div class="exp-top"><span class="exp-number">01 / NIBBLE</span><span class="exp-symbol" aria-hidden="true">✳</span></div>
-            <h3>Long tables</h3>
-            <p>Food worth lingering over, shared with good company in unforgettable settings.</p>
-          </article>
-          <article class="exp-card">
-            <div class="exp-top"><span class="exp-number">02 / SIP</span><span class="exp-symbol" aria-hidden="true">◒</span></div>
-            <h3>Winelands & tastings</h3>
-            <p>The cellar doors, growers and makers who give each glass its sense of place.</p>
-          </article>
-          <article class="exp-card">
-            <div class="exp-top"><span class="exp-number">03 / REPEAT</span><span class="exp-symbol" aria-hidden="true">✧</span></div>
-            <h3>Beyond the vines</h3>
-            <p>Market mornings, coastal afternoons, local festivals and serendipitous finds.</p>
-          </article>
-        </div>
-        <div class="exp-footer" aria-label="Planned experience categories"><span class="tag">Winelands</span><span class="tag">Tastings</span><span class="tag">Long Table</span><span class="tag">Coast & City</span><span class="tag">Markets</span><span class="tag">Festivals</span></div>
-      </div>
-    </section>
-
-    <section class="section how" id="whats-brewing" aria-labelledby="how-title">
-      <div class="wrap">
-        <div class="eyebrow section-label"><span class="hairline" aria-hidden="true"></span>Still brewing</div>
-        <h2 id="how-title">The best days start with <em>“what if?”</em></h2>
-        <p class="how-lede">The full experience is on its way: a place to find your next favourite outing, shape an itinerary and bring the whole day together. Here’s the idea.</p>
-        <div class="steps">
-          <div class="step"><span>01 / DISCOVER</span><h3>Find your flavour.</h3><p>Browse curated food, wine, market and local experiences across South Africa.</p></div>
-          <div class="step"><span>02 / PLAN</span><h3>Make a day of it.</h3><p>Turn a few good ideas into a day out, a weekend or an unforgettable getaway.</p></div>
-          <div class="step"><span>03 / RESERVE</span><h3>Make it happen.</h3><p>Keep your favourites together and follow booking details as experiences launch.</p></div>
-        </div>
-        <p class="how-quote">Every sip reveals a passion. Every nibble tells a story. Every fragrance invites you to slow down, and repeat.</p>
-      </div>
-    </section>
-
-    <section class="section letter" id="keep-in-touch" aria-labelledby="contact-title">
-      <div class="wrap letter-inner">
-        <div class="letter-copy">
-          <div class="eyebrow section-label"><span class="hairline" aria-hidden="true"></span>An invitation to the inside</div>
-          <h2 id="contact-title">The best secrets are <em>worth sharing.</em></h2>
-          <p class="letter-lede">For the curious. The spontaneous. The ones who always say yes to one more glass.</p>
-          <p>We’re discovering South Africa one beautiful table, tucked-away cellar and unexpected experience at a time. Want in before everyone else?</p>
-          <div class="insider-perks" aria-label="Insider email updates">
-            <div><span aria-hidden="true">01</span><p><strong>First dibs.</strong> Early access when fresh experiences and limited releases go live.</p></div>
-            <div><span aria-hidden="true">02</span><p><strong>Little secrets.</strong> Hidden gems, local discoveries and places worth keeping a little longer.</p></div>
-            <div><span aria-hidden="true">03</span><p><strong>Just the good stuff.</strong> Thoughtful notes, never inbox overload.</p></div>
-          </div>
-          <div class="letter-signoff"><span class="hairline" aria-hidden="true"></span>Come curious. Leave inspired.</div>
-        </div>
-        <div class="insider-card" aria-label="Early-access email signup">
-          <span class="form-overline">The insider list <span aria-hidden="true">✳</span></span>
-          <div class="form-topline"></div>
-          <h3 id="form-title">Save me <em>a seat.</em></h3>
-          <p class="form-subtitle">Be first to know what’s bubbling up. Leave your details and we’ll keep you close to the good stuff.</p>
-          <form id="insiderForm" class="insider-form" action="https://formsubmit.co/hello@nibblesiprepeat.com" method="POST" aria-labelledby="form-title">
-            <input type="hidden" name="_subject" value="Nibble, Sip, Repeat | New Insider Signup">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
-            <div class="honeypot" aria-hidden="true"><label for="insider-trap">Leave this empty</label><input id="insider-trap" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
-
-            <div class="insider-fields">
-              <div class="insider-field"><label for="insider-name">Your first name <small>optional</small></label><input id="insider-name" type="text" name="name" autocomplete="given-name" maxlength="80" placeholder="What shall we call you?"></div>
-              <div class="insider-field"><label for="insider-email">Your email address <span class="required" aria-hidden="true">*</span></label><input id="insider-email" type="email" name="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required></div>
-            </div>
-            <fieldset class="insider-interest">
-              <legend>What would you love to hear about?</legend>
-              <div class="interest-options">
-                <label class="interest-choice"><input type="radio" name="interested_in" value="Early releases" required><span>Early releases</span></label>
-                <label class="interest-choice"><input type="radio" name="interested_in" value="Secret discoveries" required><span>Secret discoveries</span></label>
-                <label class="interest-choice"><input type="radio" name="interested_in" value="Both — surprise me" required checked><span>Both, please!</span></label>
-              </div>
-            </fieldset>
-            <label class="consent"><input type="checkbox" name="permission_to_contact" value="Yes — pre-launch emails" required><span>Yes, email me about new experiences, early releases and discoveries from Nibble, Sip, Repeat. <span class="required" aria-hidden="true">*</span></span></label>
-            <button type="submit" class="btn insider-submit" id="insiderSubmit"><span class="submit-label">Put me on the list</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></button>
-            <p id="insiderStatus" class="insider-status" aria-live="polite" role="status" hidden></p>
-            <p class="privacy-note">Only invitations and discoveries worth opening. Unsubscribe any time by replying to one of our emails. We use FormSubmit to process your signup; no payment or reservation is being taken.</p>
-          </form>
-          <div id="insiderThanks" class="thanks" role="status" aria-live="polite" hidden>
-            <div class="thanks-mark" aria-hidden="true">✳</div>
-            <h4>You’re on the guest list.</h4>
-            <p>Lovely to have you around the table. Your interest has been sent — keep an eye on your inbox for the first delicious discoveries.</p>
-            <a href="#first-taste" class="thanks-link">Explore what’s coming <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="bottom">
+      <form class="dream-card" id="dreamForm">
+        <div class="dream-top"><div class="spark" aria-hidden="true">✳</div><div><span class="dream-heading">Tell us what you're longing for</span><span class="dream-sub">If you could experience anything, what would it be?</span></div><span class="dream-index">AI discovery note / 001</span></div>
+        <div class="ask-row"><label class="sr" for="dreamText">Describe the South African experience you would love to have</label><textarea id="dreamText" rows="2" maxlength="360" minlength="5" required placeholder="I'd love a slow evening with fascinating locals, somewhere a guidebook wouldn't take me…"></textarea><button class="ask-submit" type="submit" aria-label="Imagine this experience with AI"><span class="ask-label">Imagine with AI</span><span class="arrow" aria-hidden="true">↗</span></button></div>
+        <div class="sparks"><span class="sparks-label">A little inspiration</span><button class="spark-chip" type="button" data-wish="A long table with fascinating local people and conversations that last all evening">Meet interesting people</button><button class="spark-chip" type="button" data-wish="A beautiful off-grid escape, no screens, time to slow down and just be">Digital detox</button><button class="spark-chip" type="button" data-wish="An unexpected place and an experience I could never find on Google">Somewhere unexpected</button><button class="spark-chip" type="button" data-wish="An intimate food and wine experience with the people who actually make it">Food, wine & stories</button></div>
+        <p class="form-error-inline" id="dreamError" role="alert" hidden></p>
+      </form>
+      <div class="below"><button type="button" data-invite>Join the secret list ↗</button><span>Real people · Unhurried moments · First discoveries coming soon</span></div>
+    </div>
   </main>
-
-  <footer class="footer">
-    <div class="wrap footer-inner">
-      <span class="footer-brand">Nibble, Sip, Repeat</span>
-      <span class="footer-details">SOUTH AFRICA · FOOD · WINE · EXPERIENCES</span>
-      <span class="footer-details">© <span id="year">2026</span> · <a href="mailto:hello@nibblesiprepeat.com">Get in touch</a></span>
+</div>
+<dialog id="aiDialog" aria-labelledby="aiTitle">
+  <div class="modal-frame">
+    <div class="modal-story"><div><span class="modal-index">A note from the other side</span><h2>Imagine<br>being <em>there.</em></h2><p>AI can sketch a possibility. But it's the people, places and chance conversations that make it real.</p></div><span class="modal-sig">The world can wait. ✳</span></div>
+    <div class="modal-body"><button class="modal-close" id="closeAi" aria-label="Close the AI discovery note" type="button">×</button><span class="modal-kicker">Your discovery note · Not a booking</span><h2 class="modal-title" id="aiTitle">Let's imagine something extraordinary.</h2>
+      <div class="status" id="aiLoading"><span class="pulse" aria-hidden="true"></span><span>Finding the feeling behind your wish…</span></div>
+      <div id="aiResult" hidden role="status" aria-live="polite"><div class="letter"><h3 id="aiHeadline"></h3><p id="aiDescription"></p></div><p class="letter-note" id="aiInvitation"></p><div class="modal-actions"><button type="button" class="btn-dark" id="shareIdea">Let us know this is my kind of thing ↗</button><button type="button" class="link-dark" id="tryAnother">Dream up another</button></div></div>
+      <div id="aiFailure" hidden><div class="ai-error" id="aiFailureText">Our AI discovery note isn't available just yet. Your idea is still worth hearing.</div><div class="modal-actions"><button type="button" class="btn-dark" id="sendWishAnyway">Send this idea to the people behind the site ↗</button><button type="button" class="link-dark" id="retryAi">Try again</button></div></div>
+      <p class="privacy">AI suggestions are imaginative starting points, not confirmed venues, hosts or bookings. Please don't enter sensitive personal information.</p>
     </div>
-  </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    (() => {
-      const form = document.getElementById('insiderForm');
-      const button = document.getElementById('insiderSubmit');
-      const buttonLabel = button.querySelector('.submit-label');
-      const status = document.getElementById('insiderStatus');
-      const thanks = document.getElementById('insiderThanks');
-      // Static-site email delivery: FormSubmit sends each submission to the address in form.action.
-      // The recipient must confirm the one-time FormSubmit activation email before launch.
-      const ajaxEndpoint = form.action.replace('https://formsubmit.co/', 'https://formsubmit.co/ajax/');
-      form.addEventListener('submit', async event => {
-        event.preventDefault();
-        if (!form.reportValidity() || button.disabled) return;
-        if (form.elements['_honey'].value.trim()) return;
-        button.disabled = true;
-        buttonLabel.textContent = 'Sending your invitation…';
-        status.hidden = true;
-        try {
-          const response = await fetch(ajaxEndpoint, {
-            method: 'POST',
-            headers: { 'Accept': 'application/json' },
-            body: new FormData(form)
-          });
-          const result = await response.json();
-          if (!response.ok || result.success === false || result.success === 'false') {
-            throw new Error('Form service rejected the submission');
-          }
-          form.hidden = true;
-          thanks.hidden = false;
-          thanks.focus?.();
-        } catch (err) {
-          status.textContent = 'Your signup could not be sent just now. Please try again, or email hello@nibblesiprepeat.com.';
-          status.hidden = false;
-          button.disabled = false;
-          buttonLabel.textContent = 'Put me on the list';
-        }
-      });
-    })();
-  </script>
+  </div>
+</dialog>
+<dialog id="signupDialog" aria-labelledby="signupTitle">
+  <div class="modal-frame">
+    <div class="modal-story"><div><span class="modal-index">Private correspondence / No. 001</span><h2>A seat<br>at the <em>table.</em></h2><p>We're looking for places worth discovering and people worth meeting. The first invitations will be shared here.</p></div><span class="modal-sig">Be here. Be human.</span></div>
+    <div class="modal-body"><button class="modal-close" id="closeSignup" aria-label="Close the invitation form" type="button">×</button>
+      <div id="signupContent"><span class="modal-kicker">Join the first discoveries</span><h2 class="modal-title" id="signupTitle">Be among the first to know.</h2><p class="modal-lede">A few unexpected places. A few remarkable people. An invitation worth putting your phone down for.</p>
+        <form id="signupForm" class="form-fields" action="https://formsubmit.co/hello@nibblesiprepeat.com" method="POST">
+          <input type="hidden" name="_subject" value="Nibble, Sip, Repeat | First Invitation / Discovery Request"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><div class="hp" aria-hidden="true"><label>Leave this blank <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+          <label class="field">Your name (optional)<input name="name" autocomplete="given-name" maxlength="80" placeholder="What shall we call you?"></label>
+          <label class="field">Your email address *<input name="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com"></label>
+          <label class="field">The experience you're dreaming of (optional)<textarea id="signupWish" name="wish" maxlength="360" placeholder="Tell us your kind of extraordinary..."></textarea></label>
+          <label class="check"><input type="checkbox" name="permission_to_contact" value="Yes" required><span>Yes, I'd like occasional emails about secret discoveries and first invitations. I can opt out anytime.</span></label>
+          <button class="btn-dark" type="submit" id="signupSubmit">Save my seat at the table ↗</button><p class="form-error" id="signupError" hidden role="alert"></p><p class="form-notice">This sends your note to Nibble, Sip, Repeat via FormSubmit. We're not taking bookings or payments.</p>
+        </form>
+      </div>
+      <div class="form-success" id="signupThanks" hidden role="status" aria-live="polite"><span class="star">✳</span><h3>You're on the inside.</h3><p>Your note has been submitted. Here's to more conversations that begin with hello and end a little later than planned.</p><button type="button" class="btn-dark" id="thanksClose">Back to the moment ↗</button></div>
+    </div>
+  </div>
+</dialog>
+<script>
+(()=>{
+'use strict';
+const $=id=>document.getElementById(id);
+const ai=$('aiDialog'),signup=$('signupDialog'),dream=$('dreamText'),wish=$('signupWish'),form=$('signupForm');
+let latestWish='',lastOpener=null;
+function present(dialog){lastOpener=document.activeElement;if(!dialog.open)dialog.showModal()}
+function dismiss(dialog){if(dialog.open)dialog.close();if(lastOpener&&typeof lastOpener.focus==='function')lastOpener.focus({preventScroll:true});if(['#keep-in-touch','#join','#invitation'].includes(location.hash))history.replaceState(null,'',location.pathname+location.search)}
+const askForInvite=()=>{wish.value=dream.value.trim()||latestWish;present(signup)};
+document.querySelectorAll('[data-invite]').forEach(b=>b.addEventListener('click',askForInvite));
+$('closeAi').addEventListener('click',()=>dismiss(ai));$('closeSignup').addEventListener('click',()=>dismiss(signup));$('thanksClose').addEventListener('click',()=>dismiss(signup));
+for(const dialog of [ai,signup])dialog.addEventListener('click',e=>{if(e.target===dialog)dismiss(dialog)});
+document.querySelectorAll('[data-wish]').forEach(btn=>btn.addEventListener('click',()=>{dream.value=btn.dataset.wish;dream.focus();$('dreamError').hidden=true}));
+$('tryAnother').addEventListener('click',()=>{dismiss(ai);dream.focus()});
+$('shareIdea').addEventListener('click',()=>{dismiss(ai);askForInvite()});
+$('sendWishAnyway').addEventListener('click',()=>{dismiss(ai);askForInvite()});
+$('retryAi').addEventListener('click',()=>runDiscovery(latestWish));
+async function runDiscovery(text){
+  latestWish=text;present(ai);$('aiLoading').hidden=false;$('aiFailure').hidden=true;$('aiResult').hidden=true;
+  try{
+    const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),22500);
+    let response;
+    try{response=await fetch('/api/discover',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({wish:text}),signal:controller.signal})}finally{clearTimeout(timeout)}
+    const data=await response.json().catch(()=>({}));
+    if(!response.ok||typeof data.headline!=='string'||typeof data.description!=='string')throw new Error(data.error||'Unavailable');
+    $('aiHeadline').textContent=data.headline;$('aiDescription').textContent=data.description;
+    $('aiInvitation').textContent=data.invitation||'The interesting part starts when you meet the people.';
+    $('aiResult').hidden=false;
+  }catch(err){$('aiFailureText').textContent='The AI experience is not available right now. The people behind Nibble, Sip, Repeat would still love to hear what you are dreaming of.';$('aiFailure').hidden=false}
+  finally{$('aiLoading').hidden=true}
+}
+$('dreamForm').addEventListener('submit',e=>{e.preventDefault();const text=dream.value.trim();if(text.length<5){$('dreamError').textContent='Tell us a little more about the moment you have in mind.';$('dreamError').hidden=false;dream.focus();return}$('dreamError').hidden=true;runDiscovery(text)});
+form.addEventListener('submit',async e=>{
+  e.preventDefault();if(!form.reportValidity())return;
+  const button=$('signupSubmit'),error=$('signupError');button.disabled=true;button.textContent='Sending your note…';error.hidden=true;
+  try{const res=await fetch('https://formsubmit.co/ajax/hello@nibblesiprepeat.com',{method:'POST',headers:{Accept:'application/json'},body:new FormData(form)});if(!res.ok)throw new Error('Submission unavailable');const data=await res.json();if(data.success===false||data.success==='false')throw new Error('Submission unavailable');form.reset();$('signupContent').hidden=true;$('signupThanks').hidden=false}
+  catch(err){error.textContent='Your note could not be submitted. Please try again or email hello@nibblesiprepeat.com.';error.hidden=false}
+  finally{button.disabled=false;button.textContent='Save my seat at the table ↗'}
+});
+if(['#keep-in-touch','#join','#invitation'].includes(location.hash))addEventListener('load',()=>setTimeout(askForInvite,70));
+})();
+</script>
 </body>
 </html>
