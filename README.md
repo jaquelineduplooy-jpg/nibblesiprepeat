@@ -1,49 +1,45 @@
-# Nibble, Sip, Repeat — People & Possibilities (one-screen edition)
+# Nibble, Sip, Repeat - Concept Two
 
-A single-screen, people-centred **coming-soon landing page** for Nibble, Sip, Repeat South Africa.
+The selected **single-screen** landing-page design, adapted from the second sunset concept.
 
-## What is new
+## Creative direction
 
-- **People before places**: a cinematic, original hero image of real human connection over a slow sunset table.
-- **One-screen design**: the message, discovery prompt and first-invitation CTA all live on the same page. No activities catalogue or long-scroll chapters.
-- **AI discovery prompt**: visitors freely describe what they wish to experience, or tap one of four inspirations. A Vercel serverless endpoint asks AI Gateway for a personalised *concept* (not invented bookable listings), shown in an on-page discovery-note overlay.
-- **A human connection**: visitors can forward their wish into the first-invitation form. If the AI endpoint is not configured or unavailable, visitors still have a clear route to send their idea.
-- **Insider notifications**: the existing FormSubmit email integration remains addressed to `hello@nibblesiprepeat.com`. The original `/#keep-in-touch` link still opens the signup overlay.
+- Headline: **The secret isn't the place.**
+- Subheading: **It's what happens when you get there.**
+- Human connection, digital detox and hidden South African stories come before the activities catalogue.
+- Main background is a clean photograph; all text, buttons and form controls are real HTML and remain readable on phones.
+- Visitors can type their dream experience, or choose from five suggested directions, and request an imaginative AI discovery note.
+- A second modal invites visitors to join the first discoveries and pass along their wish.
+- No multiple pages, no long scrolling on ordinary desktop and mobile viewports.
 
 ## Files
 
-- `index.html` — full responsive one-page design and interactions.
-- `assets/people-at-the-table.webp` — new original hero image (optimised).
-- `assets/og-cover.jpg` — social share preview.
-- `assets/favicon.svg` — brand favicon.
-- `api/discover.mjs` — secure server-side AI endpoint using Vercel AI Gateway (no API key in the browser).
+- `index.html` - full landing page, animation, form and interaction logic.
+- `assets/people-at-sunset.webp` - optimised hero photo.
+- `assets/og-cover.jpg` - social-sharing image.
+- `assets/favicon.svg` - icon.
+- `api/discover.mjs` - Vercel Node.js AI endpoint.
 
-## How the AI is connected
+## Deploy to existing Vercel project
 
-1. Deploy these files to the **root** of your existing Vercel-connected `nibblesiprepeat` repository. Vercel will build `/api/discover` as a Node.js Function. No DNS changes required.
-2. Enable **Vercel AI Gateway** for the project/account and make sure the project has an AI spend budget/credits. Vercel deployments can authenticate with short-lived `VERCEL_OIDC_TOKEN` automatically, or you may provide an `AI_GATEWAY_API_KEY` as a **server-side Vercel environment variable**. Never store the key in `index.html`, GitHub, or a public script.
-3. The endpoint uses the model `openai/gpt-5.4-mini` (confirmed in the public Gateway model catalogue 25 October 2026). Update this only after checking that the replacement model ID exists.
-4. After deployment, test a real prompt and inspect the Vercel Function logs and AI Gateway logs. **A live AI request has not been run or billed during creation of this package.**
-5. Protect the public endpoint with an appropriate Vercel WAF rate limit or BotID and set an AI Gateway spend budget. The code includes an instance-local best-effort throttle, not a substitute for persistent rate limits.
+1. Unzip and upload the *contents* of this folder to the root of the GitHub repository for the existing `nibblesiprepeat` Vercel project, or create a preview deployment from these files.
+2. Do not alter GoDaddy DNS. The existing domain is already linked to the Vercel project.
+3. After a test preview, deploy the same files to production. Check desktop, mobile, the AI discovery response, and the signup form.
+4. Vercel AI Gateway must be enabled and funded and an applicable budget/rate limit configured. The backend uses the current model ID preserved from the previous edition; confirm availability before production launch. Authentication is server-side via Vercel OIDC or `AI_GATEWAY_API_KEY` in Vercel environment settings - never in browser HTML.
+5. FormSubmit is directed to `hello@nibblesiprepeat.com`, carried over from the original design. Confirm that this mailbox exists, activate/verify FormSubmit if prompted, and test a real delivery. No live email receipt was tested when the package was created.
 
-## Email notifications
+## Functionality and caveats
 
-The form submits by AJAX to `https://formsubmit.co/ajax/hello@nibblesiprepeat.com` and includes name, email, opt-in, and optionally the visitor's wish. This is **not** a marketing-list database or automated subscription platform. Verify mailbox ownership, activate FormSubmit if it asks for verification, and test actual delivery. The simulated success test below does not prove email delivery. Replace with a proper consent-managed list service before large-scale campaigns.
+- The AI outputs *ideas* for future experiences, not real availability, named hosts, prices or reservations.
+- If AI is not yet activated, visitors can still send their wish through the form.
+- The consent checkbox is required before a visitor submits the form. The form forwards to FormSubmit by AJAX; this is an email notification workflow, not a complete managed subscription database.
+- For large-scale launches, add a privacy notice, unsubscribe workflow and persistent rate limits to meet applicable requirements.
+- Direct links to `/#keep-in-touch` continue to open the insider signup.
+- Mobile may scroll on exceptionally small screens for accessibility.
 
-## Visitor privacy and factual integrity
+## Verification
 
-- AI receives only the wish typed by the visitor, not their signup email or name.
-- The AI generates **imaginative discovery concepts** and is explicitly instructed not to invent real available businesses, hosts, prices, bookings or dates.
-- The signup sends voluntarily entered data to FormSubmit. Ensure a suitable privacy policy and consent practice before public promotion, including compliance with South African POPIA where applicable.
-- A functional AI response depends on Vercel AI Gateway being configured. If unavailable, a human enquiry path remains open.
-
-## Verification done
-
-- Visually checked sizes: desktop 1440×900, laptop 1280×720, tablet 820×1050, mobile 390×844, compact phone 375×667, and tiny phone 320×568. No horizontal overflow. All essential controls stay above the fold except minimal vertical scrolling on the narrowest 320×568 screen for readability.
-- Simulated browser tests passed: AI success response, AI unavailable fallback, interest carried to signup, signup input validation, and signup success response.
-- Server tests passed: malformed input rejected, missing authentication returns a clear temporary-unavailable message, and the mocked AI Gateway completion yields the expected JSON.
-- The local browser sandbox blocks opening localhost/file URLs directly, so visual QA used an HTML-only browser sandbox with the local image inlined. Actual deployed function and email delivery remain unverified.
-
-## Publish workflow
-
-Upload the folder contents to the existing GitHub repository linked to the Vercel project, starting with a Preview deployment when possible. **Do not replace the live site until the design and actual AI/email flows are approved.** The existing custom domain and GoDaddy DNS do not need to change.
+- Inspected desktop 1600 x 900 and mobile 390 x 844 with no horizontal overflow and all hero imagery loaded.
+- Tested an AI success response, temporary AI failure, wish transfer into the signup form, and simulated signup success.
+- The server endpoint passed GET/POST validation and unavailable-backend checks.
+- Live AI spend, Vercel deployment and actual email delivery have not been verified. Do not represent a preview as a confirmed production release.
