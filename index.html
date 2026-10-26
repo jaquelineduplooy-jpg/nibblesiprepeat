@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en-ZA"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#1c2b22">
-<meta name="description" content="The secret isn't the place. It's what happens when you get there: unexpected people, rare discoveries, and the art of slowing down in South Africa.">
-<meta property="og:type" content="website"><meta property="og:url" content="https://www.nibblesiprepeat.com/"><meta property="og:title" content="Nibble, Sip, Repeat - The secret isn't the place."><meta property="og:description" content="It's what happens when you get there. Real people, secret places, unhurried moments. Imagine yours."><meta property="og:image" content="https://www.nibblesiprepeat.com/assets/og-cover.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Extraordinary weekends you didn't know existed. Curated discoveries, real people and hidden experiences from Nibble, Sip, Repeat.">
+<meta property="og:type" content="website"><meta property="og:url" content="https://www.nibblesiprepeat.com/"><meta property="og:title" content="Nibble, Sip, Repeat — We Found This"><meta property="og:description" content="We find what you didn't know existed: secret weekends, real people, and new experiences. Plan your next story."><meta property="og:image" content="https://www.nibblesiprepeat.com/assets/og-cover.jpg"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<title>Nibble, Sip, Repeat - Beyond the Obvious</title><style>
+<title>Nibble, Sip, Repeat — Your Weekend Secret Club</title><style>
 
 :root{--cream:#fbf0dc;--warm:#edc48c;--gold:#e0ad67;--sans:'DM Sans',Arial,sans-serif;--serif:'Cormorant Garamond','EB Garamond',Georgia,serif;--script:'Allura','Z003',cursive;--ink:#1c2b22}
 *,*::before,*::after{box-sizing:border-box}
@@ -48,6 +48,28 @@ button:focus-visible,textarea:focus-visible,input:focus-visible,a:focus-visible{
 .sparks{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}.sparks-label{font:600 10px/2 var(--sans);color:#e0b77e;letter-spacing:.1em;padding-right:4px}.spark-chip{padding:7px 11px;background:rgba(255,250,237,.05);border:1px solid rgba(244,223,195,.43);border-radius:999px;color:#fcebd6;font:500 11px/1.2 var(--sans);white-space:nowrap;transition:background .2s,border .2s}.spark-chip:hover{background:rgba(222,163,96,.25);border-color:#e5b677}
 .form-error-inline{margin:9px 0 0;font-size:12px;color:#ffd5cb}
 .promise{max-width:1250px;margin:22px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:0}.promise-item{display:flex;align-items:center;justify-content:center;gap:12px;min-width:0;padding:8px 14px;border-right:1px solid rgba(254,229,190,.28)}.promise-item:last-child{border-right:0}.promise-icon{flex:none;width:27px;height:27px;stroke:#e7bc81;stroke-width:1.3;fill:none;stroke-linecap:round;stroke-linejoin:round}.promise-item strong{display:block;font:600 9px/1.35 var(--sans);color:#fbebd5;letter-spacing:.16em;text-transform:uppercase}.promise-item small{display:block;font:400 10px/1.5 var(--sans);color:#ddceb5;margin-top:4px}
+
+/* Weekend Secret Club additions: native buttons, not extra website pages */
+.story-find{font-weight:700;letter-spacing:.02em;color:#f9d59a}
+.discover-actions{max-width:1010px;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.discover-action{width:100%;text-align:left;justify-content:flex-start;gap:11px;background:rgba(20,23,22,.61);border:1px solid rgba(250,223,184,.36);border-radius:11px;padding:12px 15px;transition:background .2s,transform .2s,border .2s}
+.discover-action:last-child{border-right:1px solid rgba(250,223,184,.36)}
+.discover-action:hover{transform:translateY(-2px);background:rgba(29,40,31,.9);border-color:#e8ba80}
+.discover-action strong{font-size:10px;letter-spacing:.13em;color:#ffe2b5}
+.discover-action small{font-size:10px;color:#dfd0bd;margin-top:4px}
+.action-number{flex:none;color:#e9bf81;font:italic 30px/.9 var(--serif);min-width:28px}
+.field-select{background:#f9f5eb;border:1px solid #b9b4a6;padding:12px 13px;color:#203729;min-width:0;width:100%;font:400 15px/1.5 var(--sans)}
+.planner-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0 16px}
+.planner-fields label{display:grid;gap:6px;color:#53604f;text-transform:uppercase;letter-spacing:.1em;font:700 10px/1.4 var(--sans)}
+.field-note-index{font:700 10px/1.3 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#a1754f}
+.secret-note{padding:19px 20px;margin:15px 0 0;border:1px solid #cdbba1;background:#f7f1e5;border-left:4px solid #b88352}
+.secret-note h3{font:400 42px/.93 var(--serif);color:#243e2d;margin:10px 0 16px;letter-spacing:-.03em}
+.secret-note p{font:400 14px/1.6 var(--sans);color:#425043;margin:0}
+.fineprint{font:400 12px/1.6 var(--sans);color:#627166;margin:15px 0 0}
+@media(max-width:800px){.discover-actions{gap:7px}.discover-action{padding:11px 10px;gap:6px}.action-number{font-size:23px;min-width:21px}.discover-action strong{font-size:9px;letter-spacing:.05em}.discover-action small{display:none}}
+@media(max-width:560px){.discover-actions{gap:5px;margin-top:11px}.discover-action{min-height:58px;padding:9px 5px;gap:5px;justify-content:center}.action-number{font-size:19px;min-width:18px}.discover-action strong{font-size:8px;line-height:1.28}.planner-fields{grid-template-columns:1fr}.secret-note h3{font-size:34px}.story-find{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.discover-action:hover{transform:none}}
+
 /* Respect the core one-screen brief; small devices may naturally scroll to prevent hiding content. */
 @media(max-width:1100px){.header-note{display:none}.whisper{right:7%;top:14%;font-size:36px}.story h1{font-size:clamp(68px,8.2vw,100px)}.promise-item small{display:none}}
 @media(max-width:800px){.header{min-height:97px;padding:20px 29px 9px}.brand-name{font-size:48px}.hero-top{padding:40px 29px 4px}.site::before{background:linear-gradient(90deg,rgba(15,24,22,.85) 0%,rgba(15,24,22,.55) 72%,rgba(15,24,22,.28) 100%),linear-gradient(0deg,rgba(12,19,16,.91),rgba(12,19,16,.14) 72%)}.photo{object-position:63% center}.whisper{display:none}.story h1{font-size:clamp(64px,10vw,93px)}.bottom{padding:12px 28px 27px}.promise{margin-top:17px}.promise-item{gap:6px;padding:6px 7px}.promise-item strong{font-size:8px;letter-spacing:.07em}.promise-icon{width:22px}.modal-frame{grid-template-columns:1fr}.modal-story{display:none}.modal-body{padding:45px 31px 31px}}
@@ -69,36 +91,38 @@ dialog::backdrop{background:rgba(8,19,15,.77);backdrop-filter:blur(8px)}.modal-f
 .form-fields{display:grid;gap:16px;margin-top:25px}.field{display:grid;gap:7px;color:#4b5147;font:700 10px/1.5 var(--sans);letter-spacing:.13em;text-transform:uppercase}.field input,.field textarea{padding:12px 13px;border-radius:0;border:1px solid #b9b4a6;background:#f9f5eb;color:#1d3327;min-width:0;letter-spacing:normal;text-transform:none;font:400 15px/1.5 var(--sans)}.field textarea{min-height:76px;resize:vertical}.check{display:flex;gap:11px;align-items:start;cursor:pointer;color:#4c5147;font:400 12px/1.6 var(--sans)}.check input{accent-color:#355640;flex:none;margin-top:3px}.form-notice{font:400 12px/1.5 var(--sans);color:#78766d;margin:0}.form-error{color:#9e402b;font-size:12px;margin:0}.form-success{text-align:left;padding-top:16px}.form-success .star{font:52px/1 var(--serif);color:#ab774a}.form-success h3{font:400 45px/1 var(--serif);margin:12px 0}.form-success p{font-size:14px;line-height:1.75}
 .hp{display:none!important}
 
+
+/* The three discovery actions remain in one deliberate row on phones. */
+@media(max-width:560px){.discover-actions{grid-template-columns:repeat(3,minmax(0,1fr))}.discover-action{justify-content:center;gap:2px;padding:9px 5px}.discover-action .action-number{display:none}.discover-action strong{font-size:9px;letter-spacing:0}.discover-action small{display:none}}
 </style></head><body>
 <div class="site">
 <img class="photo" src="assets/people-at-sunset.webp" alt="Friends talking face-to-face over food and wine at a small outdoor table, with a sunset over South African mountains" fetchpriority="high">
 <header class="header">
-  <a class="brand" href="/" aria-label="Nibble, Sip, Repeat South Africa, home"><span class="brand-name">Nibble, Sip, Repeat</span><span class="brand-location">South Africa / Beyond the obvious</span></a>
-  <span class="header-note">Slower travel &nbsp; &middot; &nbsp; Deeper connections &nbsp; &middot; &nbsp; Real experiences</span>
-  <button class="header-cta" type="button" data-invite>Join the secret list &nbsp; &#8599;</button>
+  <a class="brand" href="/" aria-label="Nibble, Sip, Repeat South Africa, home"><span class="brand-name">Nibble, Sip, Repeat</span><span class="brand-location">South Africa / The Weekend Secret Club</span></a>
+  <span class="header-note">We find the extraordinary &nbsp; &middot; &nbsp; You experience it</span>
+  <button class="header-cta" type="button" data-invite>Get the secret drop &nbsp; &#8599;</button>
 </header>
 <main class="hero">
   <div class="hero-top">
     <div class="story">
-      <span class="eyebrow">Not another travel guide</span>
+      <span class="eyebrow">We found this / South Africa beyond the obvious</span>
       <h1><span>The secret</span><span>isn&#8217;t the place.</span></h1>
       <p class="story-sub">It&#8217;s what happens when you get there.</p>
-      <p class="story-copy">Extraordinary people. Unforgettable places. Real conversations. South Africa beyond the guidebooks &mdash; where you forget to check your phone and remember what it feels like to be there.</p>
+      <p class="story-copy"><strong class="story-find">Wait. You can actually do that?</strong><br>Places you never knew existed. People you would never have met. A new reason to get out this weekend. We find the extraordinary &mdash; and let you in on the secret.</p>
     </div>
-    <div class="whisper" aria-hidden="true"><span>Less scrolling</span><span>More connecting</span></div>
+    <div class="whisper" aria-hidden="true"><span>We found this.</span><span>Will you go?</span></div>
   </div>
   <div class="bottom">
     <form class="dream-card" id="dreamForm" aria-label="Imagine your South African discovery">
-      <div class="dream-top"><span class="spark" aria-hidden="true">&#10022;</span><div><span class="dream-heading">Your next story starts here</span><span class="dream-sub">What kind of experience are you dreaming about?</span></div><span class="dream-index">Your wish &middot; Our AI &middot; A possibility</span></div>
-      <div class="ask-row"><label for="dreamText" class="sr">Describe the meaningful experience you want in South Africa</label><textarea id="dreamText" rows="2" minlength="5" maxlength="360" required placeholder="A long sunset supper with fascinating locals, somewhere the map doesn't tell you about..."></textarea><button class="ask-submit" type="submit" aria-label="Imagine your experience with AI"><span class="ask-label">Imagine it</span><span class="arrow" aria-hidden="true">&#8594;</span></button></div>
-      <div class="sparks"><span class="sparks-label">Follow a feeling</span><button class="spark-chip" type="button" data-wish="I want to meet interesting local people and have the kind of conversations that last all evening">Meaningful people</button><button class="spark-chip" type="button" data-wish="I dream of a hidden South African place off the usual routes, somewhere unexpected and personal">Hidden places</button><button class="spark-chip" type="button" data-wish="I would love a beautiful intimate food and wine encounter with the people who make it">Food &amp; wine</button><button class="spark-chip" type="button" data-wish="An off-grid digital detox with time to be present, slow down and connect with others">Digital detox</button><button class="spark-chip" type="button" data-wish="Surprise me with something genuinely unique in South Africa that I would never think to look for">Something unique</button></div>
+      <div class="dream-top"><span class="spark" aria-hidden="true">&#10022;</span><div><span class="dream-heading">Have a free weekend? Make it count.</span><span class="dream-sub">What would make you say “I never knew that existed”?</span></div><span class="dream-index">Tell us &middot; AI imagines &middot; We curate</span></div>
+      <div class="ask-row"><label for="dreamText" class="sr">Describe the meaningful experience you want in South Africa</label><textarea id="dreamText" rows="2" minlength="5" maxlength="360" required placeholder="I have Saturday free, two friends and a car. Find me something within two hours of Cape Town that will blow us away..."></textarea><button class="ask-submit" type="submit" aria-label="Imagine your experience with AI"><span class="ask-label">Dream it</span><span class="arrow" aria-hidden="true">&#8594;</span></button></div>
+      <div class="sparks"><span class="sparks-label">Try a secret</span><button class="spark-chip" type="button" data-wish="Find me a truly unusual place to stay this weekend, somewhere quietly remarkable and outside the ordinary.">Secret stay</button><button class="spark-chip" type="button" data-wish="I'd love to meet a local maker, storyteller or host and share a real conversation and an extraordinary experience.">Meet the makers</button><button class="spark-chip" type="button" data-wish="Surprise me with a hidden destination worth a weekend drive from Cape Town.">Worth the drive</button><button class="spark-chip" type="button" data-wish="I need an off-grid weekend to reconnect with the people I love, without screens.">Digital detox</button><button class="spark-chip" type="button" data-wish="I have a free weekend. Surprise me with a rare experience I would never think to search for.">Surprise me</button></div>
       <p class="form-error-inline" id="dreamError" role="alert" hidden></p>
     </form>
-    <div class="promise" aria-label="What Nibble, Sip, Repeat is about">
-      <div class="promise-item"><svg viewBox="0 0 32 32" class="promise-icon" aria-hidden="true"><circle cx="12" cy="10" r="4"/><circle cx="23" cy="12" r="3"/><path d="M4 27v-4a8 8 0 0116 0v4M20 21a6 6 0 018 6"/></svg><span><strong>Meet extraordinary people</strong><small>The hosts. The locals. Each other.</small></span></div>
-      <div class="promise-item"><svg viewBox="0 0 32 32" class="promise-icon" aria-hidden="true"><path d="M16 29s10-10 10-17a10 10 0 00-20 0c0 7 10 17 10 17Z"/><circle cx="16" cy="12" r="3.5"/></svg><span><strong>Discover hidden places</strong><small>Beyond the obvious.</small></span></div>
-      <div class="promise-item"><svg viewBox="0 0 32 32" class="promise-icon" aria-hidden="true"><path d="M7 4h14v8a7 7 0 01-14 0V4ZM14 19v9M9 28h10M25 4v24M23 8l2-4 2 4"/></svg><span><strong>Nibble, sip, repeat</strong><small>Stories around the table.</small></span></div>
-      <div class="promise-item"><svg viewBox="0 0 32 32" class="promise-icon" aria-hidden="true"><path d="M27 5C13 5 5 15 5 27 20 27 27 18 27 5ZM5 27c5-10 12-15 22-22"/></svg><span><strong>Savour slower moments</strong><small>Put the world on pause.</small></span></div>
+    <div class="promise discover-actions" aria-label="How to discover something new">
+      <button class="promise-item discover-action" type="button" id="openSecret"><span class="action-number">01</span><span><strong>WE FOUND THIS <span aria-hidden="true">↗</span></strong><small>A taste of the secret discoveries we're scouting</small></span></button>
+      <button class="promise-item discover-action" type="button" id="openPlanner"><span class="action-number">02</span><span><strong>PLAN MY WEEKEND <span aria-hidden="true">↗</span></strong><small>Tell us your time, people and kind of magic</small></span></button>
+      <button class="promise-item discover-action" type="button" id="surpriseMe"><span class="action-number">03</span><span><strong>SURPRISE ME <span aria-hidden="true">↗</span></strong><small>Open an unexpected field note</small></span></button>
     </div>
   </div>
 </main></div>
@@ -117,32 +141,77 @@ dialog::backdrop{background:rgba(8,19,15,.77);backdrop-filter:blur(8px)}.modal-f
   <div class="modal-frame">
     <div class="modal-story"><div><span class="modal-index">Private correspondence / No. 001</span><h2>A seat<br>at the <em>table.</em></h2><p>We're looking for places worth discovering and people worth meeting. The first invitations will be shared here.</p></div><span class="modal-sig">Be here. Be human.</span></div>
     <div class="modal-body"><button class="modal-close" id="closeSignup" aria-label="Close the invitation form" type="button">×</button>
-      <div id="signupContent"><span class="modal-kicker">Join the first discoveries</span><h2 class="modal-title" id="signupTitle">Be among the first to know.</h2><p class="modal-lede">A few unexpected places. A few remarkable people. An invitation worth putting your phone down for.</p>
+      <div id="signupContent"><span class="modal-kicker">Get the Wednesday Secret Drop</span><h2 class="modal-title" id="signupTitle">Your weekends are about to get interesting.</h2><p class="modal-lede">We are scouting the extraordinary. Join the first reveals, stories, and new weekend possibilities, curated with real hosts and local people.</p>
         <form id="signupForm" class="form-fields" action="https://formsubmit.co/hello@nibblesiprepeat.com" method="POST">
           <input type="hidden" name="_subject" value="Nibble, Sip, Repeat | First Invitation / Discovery Request"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><div class="hp" aria-hidden="true"><label>Leave this blank <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
           <label class="field">Your name (optional)<input name="name" autocomplete="given-name" maxlength="80" placeholder="What shall we call you?"></label>
           <label class="field">Your email address *<input name="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com"></label>
+          <label class="field">Where should we find your next secret? (optional)<input name="home_region" placeholder="e.g. Cape Town, Garden Route, Johannesburg"></label>
           <label class="field">The experience you're dreaming of (optional)<textarea id="signupWish" name="wish" maxlength="360" placeholder="Tell us your kind of extraordinary..."></textarea></label>
-          <label class="check"><input type="checkbox" name="permission_to_contact" value="Yes" required><span>Yes, I'd like occasional emails about secret discoveries and first invitations. I can opt out anytime.</span></label>
-          <button class="btn-dark" type="submit" id="signupSubmit">Save my seat at the table ↗</button><p class="form-error" id="signupError" hidden role="alert"></p><p class="form-notice">This sends your note to Nibble, Sip, Repeat via FormSubmit. We're not taking bookings or payments.</p>
+          <label class="check"><input type="checkbox" name="permission_to_contact" value="Yes" required><span>Yes, I want emails about new secrets, weekend finds and first invitations. I can opt out at any time.</span></label>
+          <button class="btn-dark" type="submit" id="signupSubmit">Let me in on the secret ↗</button><p class="form-error" id="signupError" hidden role="alert"></p><p class="form-notice">For now, this sends your note to our team via FormSubmit. A newsletter system and unsubscribe workflow must be activated before weekly emails begin. No bookings or payments.</p>
         </form>
       </div>
-      <div class="form-success" id="signupThanks" hidden role="status" aria-live="polite"><span class="star">✳</span><h3>You're on the inside.</h3><p>Your note has been submitted. Here's to more conversations that begin with hello and end a little later than planned.</p><button type="button" class="btn-dark" id="thanksClose">Back to the moment ↗</button></div>
+      <div class="form-success" id="signupThanks" hidden role="status" aria-live="polite"><span class="star">✳</span><h3>You're on the inside.</h3><p>Your interest has been sent. The first real secret drops will begin once the experiences are verified and ready to reveal.</p><button type="button" class="btn-dark" id="thanksClose">Back to the moment ↗</button></div>
     </div>
   </div>
 </dialog>
+
+<dialog id="secretDialog" aria-labelledby="secretTitle">
+  <div class="modal-frame">
+    <div class="modal-story"><div><span class="modal-index">The Weekend Secret Club / Field Notes</span><h2>We<br><em>found this.</em></h2><p>Not another list of places. A reason to turn an ordinary weekend into a story worth telling.</p></div><span class="modal-sig">A little wonder, every week.</span></div>
+    <div class="modal-body"><button class="modal-close" id="closeSecret" aria-label="Close secret preview" type="button">×</button>
+      <span class="modal-kicker">A glimpse of what we're scouting</span><h2 class="modal-title" id="secretTitle">Wait. You can actually do that?</h2>
+      <div class="secret-note"><span class="field-note-index" id="fieldIndex">Field note / Example 01</span><h3 id="fieldTitle"></h3><p id="fieldDescription"></p></div>
+      <p class="fineprint">These are illustrative experience concepts, not confirmed venues, dates or bookings. Real discoveries will be shared only after verification and host permission.</p>
+      <div class="modal-actions"><button type="button" class="btn-dark" id="requestFirstDrop">Send me the first real reveal ↗</button><button type="button" class="link-dark" id="nextSecret">Another secret ↗</button></div>
+    </div>
+  </div>
+</dialog>
+<dialog id="plannerDialog" aria-labelledby="plannerTitle">
+  <div class="modal-frame">
+    <div class="modal-story"><div><span class="modal-index">The Weekend Editor / Beta</span><h2>Make<br>it <em>count.</em></h2><p>Good weekends begin with a feeling: curiosity, connection, a little wonder and enough time to actually enjoy it.</p></div><span class="modal-sig">There's more out there.</span></div>
+    <div class="modal-body"><button class="modal-close" id="closePlanner" aria-label="Close weekend planner" type="button">×</button>
+      <span class="modal-kicker">Design your kind of unexpected</span><h2 class="modal-title" id="plannerTitle">What are we finding for you?</h2><p class="modal-lede">A few details help us understand your perfect escape. For now, AI imagines a starting point; real matches are coming once the secret collection is verified.</p>
+      <form id="plannerForm">
+      <div class="planner-fields">
+        <label>Starting from<select class="field-select" id="fromRegion"><option value="Cape Town">Cape Town</option><option value="Stellenbosch / Winelands">Stellenbosch / Winelands</option><option value="Garden Route">Garden Route</option><option value="Johannesburg">Johannesburg</option><option value="Durban">Durban</option><option value="somewhere in South Africa">Somewhere else</option></select></label>
+        <label>When<select class="field-select" id="weekendWhen"><option value="this coming weekend">This weekend</option><option value="next weekend">Next weekend</option><option value="a free day">Just one day</option><option value="any weekend">Flexible</option></select></label>
+        <label>With whom<select class="field-select" id="withWho"><option value="a couple">My partner</option><option value="a small group of friends">Friends</option><option value="my family">Family</option><option value="myself">Solo</option></select></label>
+        <label>Distance<select class="field-select" id="howFar"><option value="up to two hours away">Up to 2 hours</option><option value="under an hour away">Under an hour</option><option value="up to four hours away">Up to 4 hours</option><option value="as far as it takes">Surprise me</option></select></label>
+        <label style="grid-column:1/-1">The feeling<select class="field-select" id="desiredVibe"><option value="something surprisingly unique that we wouldn't find ourselves">Something I never knew existed</option><option value="a deep human connection with an interesting local host or maker">People and conversations</option><option value="a beautiful slow escape with no screens">Digital detox</option><option value="a rare food and wine story with a real local maker">Food, wine and stories</option><option value="an unusual overnight escape">A secret stay</option></select></label>
+      </div><button type="submit" class="btn-dark">Imagine my weekend ↗</button>
+      </form><p class="fineprint">Planning preview only. No inventory, prices, travel time or availability is being claimed.</p>
+    </div>
+  </div>
+</dialog>
+
 <script>
 (()=>{
 'use strict';
 const $=id=>document.getElementById(id);
 const ai=$('aiDialog'),signup=$('signupDialog'),dream=$('dreamText'),wish=$('signupWish'),form=$('signupForm');
 let latestWish='',lastOpener=null;
+const secret=$('secretDialog'),planner=$('plannerDialog');
+const fieldNotes=[
+ {title:'An invitation to someone’s table.',description:'Not another restaurant booking. Imagine sharing a long table with a local maker who tells you why they started, what they love and where the evening takes them. The best part is the conversation you never expected.'},
+ {title:'A hideaway you nearly drove past.',description:'A tiny place tucked off the obvious route. A slow morning. A surprising landscape. A host with a story. No packed itinerary and no pressure to do anything but be there.'},
+ {title:'After hours, with the locals.',description:'What if the door opened to a craft, kitchen or creative studio you didn’t know you could visit? The secret is the invitation to meet the person behind it, not simply the address.'},
+];
+let currentNote=0;
+function showNote(i){currentNote=(i+fieldNotes.length)%fieldNotes.length;const note=fieldNotes[currentNote];$('fieldIndex').textContent=`Field note / Example ${String(currentNote+1).padStart(2,'0')}`;$('fieldTitle').textContent=note.title;$('fieldDescription').textContent=note.description;present(secret)}
+$('openSecret').addEventListener('click',()=>showNote(0));$('surpriseMe').addEventListener('click',()=>showNote(Math.floor(Math.random()*fieldNotes.length)));
+$('openPlanner').addEventListener('click',()=>present(planner));$('nextSecret').addEventListener('click',()=>showNote(currentNote+1));
+$('closeSecret').addEventListener('click',()=>dismiss(secret));$('closePlanner').addEventListener('click',()=>dismiss(planner));
+$('requestFirstDrop').addEventListener('click',()=>{dismiss(secret);latestWish='I want to be first to hear about a real, verified secret weekend experience.';wish.value=latestWish;present(signup)});
+$('plannerForm').addEventListener('submit',e=>{e.preventDefault();const text=`I'm starting from ${$('fromRegion').value}, going ${$('weekendWhen').value} with ${$('withWho').value}. I can travel ${$('howFar').value}. I want ${$('desiredVibe').value}. Please imagine a people-first weekend with no invented venues, bookings or prices.`;dream.value=text.slice(0,360);dismiss(planner);runDiscovery(dream.value)});
+
 function present(dialog){lastOpener=document.activeElement;if(!dialog.open)dialog.showModal()}
 function dismiss(dialog){if(dialog.open)dialog.close();if(lastOpener&&typeof lastOpener.focus==='function')lastOpener.focus({preventScroll:true});if(['#keep-in-touch','#join','#invitation'].includes(location.hash))history.replaceState(null,'',location.pathname+location.search)}
-const askForInvite=()=>{wish.value=dream.value.trim()||latestWish;present(signup)};
+const askForInvite=()=>{wish.value=wish.value.trim()||dream.value.trim()||latestWish;present(signup)};
 document.querySelectorAll('[data-invite]').forEach(b=>b.addEventListener('click',askForInvite));
 $('closeAi').addEventListener('click',()=>dismiss(ai));$('closeSignup').addEventListener('click',()=>dismiss(signup));$('thanksClose').addEventListener('click',()=>dismiss(signup));
-for(const dialog of [ai,signup])dialog.addEventListener('click',e=>{if(e.target===dialog)dismiss(dialog)});
+for(const dialog of [ai,signup,secret,planner])dialog.addEventListener('click',e=>{if(e.target===dialog)dismiss(dialog)});
 document.querySelectorAll('[data-wish]').forEach(btn=>btn.addEventListener('click',()=>{dream.value=btn.dataset.wish;dream.focus();$('dreamError').hidden=true}));
 $('tryAnother').addEventListener('click',()=>{dismiss(ai);dream.focus()});
 $('shareIdea').addEventListener('click',()=>{dismiss(ai);askForInvite()});
@@ -157,7 +226,7 @@ async function runDiscovery(text){
     const data=await response.json().catch(()=>({}));
     if(!response.ok||typeof data.headline!=='string'||typeof data.description!=='string')throw new Error(data.error||'Unavailable');
     $('aiHeadline').textContent=data.headline;$('aiDescription').textContent=data.description;
-    $('aiInvitation').textContent=data.invitation||'The interesting part starts when you meet the people.';
+    $('aiInvitation').textContent=data.invitation||'Our real discoveries will begin with people and places we have checked.';
     $('aiResult').hidden=false;
   }catch(err){$('aiFailureText').textContent='The AI experience is not available right now. The people behind Nibble, Sip, Repeat would still love to hear what you are dreaming of.';$('aiFailure').hidden=false}
   finally{$('aiLoading').hidden=true}
@@ -168,7 +237,7 @@ form.addEventListener('submit',async e=>{
   const button=$('signupSubmit'),error=$('signupError');button.disabled=true;button.textContent='Sending your note…';error.hidden=true;
   try{const res=await fetch('https://formsubmit.co/ajax/hello@nibblesiprepeat.com',{method:'POST',headers:{Accept:'application/json'},body:new FormData(form)});if(!res.ok)throw new Error('Submission unavailable');const data=await res.json();if(data.success===false||data.success==='false')throw new Error('Submission unavailable');form.reset();$('signupContent').hidden=true;$('signupThanks').hidden=false}
   catch(err){error.textContent='Your note could not be submitted. Please try again or email hello@nibblesiprepeat.com.';error.hidden=false}
-  finally{button.disabled=false;button.textContent='Save my seat at the table ↗'}
+  finally{button.disabled=false;button.textContent='Let me in on the secret ↗'}
 });
 if(['#keep-in-touch','#join','#invitation'].includes(location.hash))addEventListener('load',()=>setTimeout(askForInvite,70));
 })();
