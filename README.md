@@ -1,27 +1,15 @@
-# Nibble, Sip, Repeat — The Weekend Secret Club (MVP preview)
+# Nibble, Sip, Repeat — Public Coming Soon Landing (Selected Concept 2)
 
-This is the **one-page, chosen Concept 2 design**, refined with the stronger "We Found This" weekly-discovery proposition. The live Vercel domain is not changed.
+This is the **one-screen** public landing design selected earlier, not the full Weekend Secret Club website.
 
-## What works in this preview
-- One cinematic page, same photo and palette
-- Buttons **We Found This**, **Plan My Weekend**, **Surprise Me** open overlays on the same page
-- Example field notes cycle in a modal and are explicitly labelled **illustrative, not bookable**
-- Weekend planner collects five quick preferences and composes a wish for the existing AI imaginative discovery endpoint
-- The user can submit an opt-in request via the existing FormSubmit email workflow
-- Existing `/#keep-in-touch` links still open the signup
+Public features: cinematic sunset hero, brand story, one simple interest prompt, five inspiration chips, modal early-access signup, social preview image.
 
-## What is NOT launched yet
-- There are no verified hosts/venues available in this package. Do not imply the examples are actual venues.
-- AI remains a possibilities generator and is **not** backed by verified available inventory. Its server endpoint needs working Vercel AI Gateway access.
-- FormSubmit is **only a notification to your inbox**, not an automated Wednesday mailing list. Activate a proper opt-in subscriber system for recurring emails. Verify the recipient `hello@nibblesiprepeat.com` and actual delivery.
-- Pricing, dates, bookings and availability have not been tested or connected.
+Intentionally absent: public events, event catalogue, weekend planner, booking flows, AI generation endpoint, research data, the unpublished scouting workbook.
 
-## Files
-- index.html: one-screen website and overlay flows
-- api/discover.mjs: existing server-side AI endpoint, unchanged (still imaginative suggestions only)
-- assets/: selected Concept 2 photo, social image and favicon
-- Discovery-intake-template.csv: source-of-truth schema for vetting the first 15 experiences
-- WEEKEND-CLUB-BLUEPRINT.md: production plan and discovery/editorial process
+## To publish
+1. Upload the **contents** of this folder to the repository's production branch only after backing up or preserving the full development work elsewhere.
+2. The existing domain on Vercel needs no DNS modifications.
+3. Preview and test before production. The signup submits to the provisional `hello@nibblesiprepeat.com` via FormSubmit. Confirm the inbox, activate the service and test a real email. It is **not yet a managed mailing list**.
+4. Preserve the live deep link `/#keep-in-touch`.
 
-## Deploy
-Upload the contents to the existing `nibblesiprepeat` Vercel project or preferably create a preview deployment. Don't change DNS. Test mobile, the dropdown form, AI, FormSubmit and email receipt before promoting to production.
+The underlying AI weekend planner and curated experience database remain in the separate development folder. No claim is made that AI is live.
